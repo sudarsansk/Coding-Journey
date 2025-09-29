@@ -9,7 +9,7 @@ import java.util.Map;
 import java.util.stream.Collectors;
 
 public class JavaStreamMedium {
-
+	
 	public static void main(String[] args) {
 		
 		//1. Group By and Count
@@ -29,9 +29,6 @@ public class JavaStreamMedium {
 		func_2_4();
 		func_5();
 		func_6(employees);
-		
-		
-		
 	}
 
 	private static void func_6(List<Employee> employees) {
@@ -43,7 +40,7 @@ public class JavaStreamMedium {
 	            .map(Employee::getName)                           // Get only names
 	            .collect(Collectors.joining(", "));
 		System.out.println(itEmployees); //Mathi, Sreni
-		
+				
 		//For all Department
 		Map<String, String> departmentEmployees = employees.stream()
 	            .collect(Collectors.groupingBy(
